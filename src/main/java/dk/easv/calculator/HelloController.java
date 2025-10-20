@@ -193,11 +193,13 @@ public class HelloController {
                     double result = doubleArrayList.get(i-optationDone) * doubleArrayList.get(i +1 -optationDone);
                     doubleArrayList.set(i-optationDone, result);
                     doubleArrayList.remove(i+1-optationDone);
+                    optationDone++;
                 }
                 else if(symbol.equals("/")) {
                     double result = doubleArrayList.get(i-optationDone) / doubleArrayList.get(i +1 -optationDone);
                     doubleArrayList.set(i-optationDone, result);
                     doubleArrayList.remove(i+1-optationDone);
+                    optationDone++;
                 }
             }
             for (int i = 0; i < operators.size(); i++) {
@@ -206,11 +208,13 @@ public class HelloController {
                     double result = doubleArrayList.get(i-optationDone) + doubleArrayList.get(i +1 -optationDone);
                     doubleArrayList.set(i-optationDone, result);
                     doubleArrayList.remove(i+1-optationDone);
+                    optationDone++;
                 }
                 else if(symbol.equals("-")) {
                     double result = doubleArrayList.get(i-optationDone) - doubleArrayList.get(i +1 -optationDone);
                     doubleArrayList.set(i-optationDone, result);
                     doubleArrayList.remove(i+1-optationDone);
+                    optationDone++;
                 }
             }
             displayedText = String.valueOf(doubleArrayList.getFirst());
