@@ -202,6 +202,7 @@ public class HelloController {
                     optationDone++;
                 }
             }
+            optationDone = 0;
             for (int i = 0; i < operators.size(); i++) {
                 String symbol = operators.get(i);
                 if(symbol.equals("+")) {
@@ -214,6 +215,8 @@ public class HelloController {
                     double result = doubleArrayList.get(i-optationDone) - doubleArrayList.get(i +1 -optationDone);
                     doubleArrayList.set(i-optationDone, result);
                     doubleArrayList.remove(i+1-optationDone);
+                    optationDone++;
+                } else if (symbol.equals("*")||symbol.equals("/")) {
                     optationDone++;
                 }
             }
