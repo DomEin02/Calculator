@@ -46,7 +46,7 @@ public class HelloController {
 
     @FXML
     private void onBtnDivide(ActionEvent actionEvent) {
-        writeOperation("*");
+        writeOperation("/");
     }
 
     @FXML
